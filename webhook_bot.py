@@ -24,6 +24,7 @@ def place_order(action, symbol, qty):
 
 @app.route('/webhook', methods=['POST'])
 def webhook():
+
     data = request.json
     action = data.get("action")
     symbol = data.get("symbol")
